@@ -167,6 +167,16 @@ body {
   color: var(--font-color-red);
 }
 
+.me .left-side {
+  display: flex;
+}
+
+.profilepicture {
+  width: 256px;
+  border-radius: 50%;
+  margin: auto;
+}
+
 .methodologie {
   background-color: #fbb03b;
   display: flex;
