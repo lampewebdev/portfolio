@@ -231,6 +231,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  padding-top: var(--default-padding);
+  padding-bottom: var(--default-padding);
+
 }
 .contact .social-cards .social-card {
   padding-left: 5%;
@@ -244,7 +247,7 @@ body {
     --default-font-size: 16px;
     --heading-one-size: 18px;
     --slogan-font-size: 20px;
-    --second-slogan-font-size: 40px;
+    --second-slogan-font-size: 24px;
     --default-padding: 16px;
     --default-width: 80%;
   }
@@ -262,6 +265,9 @@ body {
   .row {
     flex-direction: column;
   }
+  /* .profilepicture {
+    width: 196px;
+  } */
 }
 
 @media only screen and (max-width: 940px) {
