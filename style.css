@@ -188,13 +188,11 @@ body {
 .methodologie {
   background-color: #fbb03b;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 5%;
 }
-/* .card * {
-  border: solid 1px red;
-} */
+
 .card {
   display: flex;
   flex-direction: column;
@@ -204,6 +202,8 @@ body {
   width: 300px;
   height: 430px;
   padding: 40px;
+  margin: 10px;
+  margin-top: 5%;
   border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -277,6 +277,10 @@ body {
 
   .row {
     flex-direction: column;
+  }
+  .methodologie {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
