@@ -20,6 +20,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+a{
+  text-decoration: underline;
+  font-family: Raleway, sans-serif;
+  font-size: var(--default-font-size);
+  color: var(--font-color);
+}
 .center {
   display: flex;
   justify-content: center;
@@ -72,15 +79,6 @@ body {
   line-height: var(--small-font-size);
   text-transform: uppercase;
   padding-left: var(--default-padding);
-}
-
-.content-wrapper {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-flow: column wrap; */
-  /* flex: 1 1 100%; */
-  /* min-height: 100%; */
 }
 
 .row {
@@ -152,12 +150,6 @@ body {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
-.right-side {
-  /* width: 50%; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-self: center; */
-}
 
 .second-row {
   background-color: #ffffff;
@@ -183,6 +175,7 @@ body {
   width: 256px;
   border-radius: 50%;
   margin: auto;
+  max-height: 120%;
 }
 
 .methodologie {
@@ -252,6 +245,16 @@ body {
 .right-side.picture-content {
   margin-left: 5%;
 }
+
+.emailme{
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.btn-red{
+  background-color: var(--font-color-red);
+}
+
 @media only screen and (max-width: 940px) {
   :root {
     --small-font-size: 12px;
