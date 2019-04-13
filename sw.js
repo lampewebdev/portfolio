@@ -6,8 +6,9 @@ self.addEventListener('install', (event) => {
             '/img/',
             '/index.html',
             '/style.css',
-            '/manifest.json',
           ]);
         })
     );
 });
+
+self.addEventListener('fetch', (event) => {});
