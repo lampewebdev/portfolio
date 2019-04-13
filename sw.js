@@ -1,6 +1,6 @@
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open('lampeweb').then(function(cache) {
+        caches.open('lampeweb').then((cache) => {
           return cache.addAll([
             '/',
             '/img/',
@@ -9,6 +9,5 @@ self.addEventListener('install', function(event) {
             '/manifest.json',
           ]);
         })
-      );
-  });
-  
+    );
+});
