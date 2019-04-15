@@ -1,21 +1,28 @@
 /* latin-ext */
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyCMIT5lu.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  font-display: 'swap';
+  src: local("Raleway"), local("Raleway-Regular"),
+    url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyCMIT5lu.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  font-display: "swap";
 }
 
 /* latin */
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  font-display: 'swap';
+  src: local("Raleway"), local("Raleway-Regular"),
+    url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ITw.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+  font-display: "swap";
 }
 
 :root {
@@ -24,12 +31,13 @@
   --font-color-blue: #77bfeb;
   --font-color-red: #d7292a;
   --first-bg-color: #f5f5f5;
-  --font-color-green: #1B8361;
+  --font-color-green: #1b8361;
   --small-font-size: 12px;
   --default-font-size: 16px;
   --heading-one-size: 18px;
   --slogan-font-size: 20px;
   --second-slogan-font-size: 50px;
+  --btn-font-size: 20px;
   --default-padding: 16px;
   --default-width: 80%;
 }
@@ -40,7 +48,7 @@
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: underline;
   font-family: Raleway, sans-serif;
   font-size: var(--default-font-size);
@@ -154,7 +162,7 @@ body {
 .cta-button {
   margin-top: var(--default-padding);
 
-  display: inline-block;
+  /* display: inline; */
   border-radius: 32px;
   border: 0;
   color: white;
@@ -163,13 +171,18 @@ body {
   padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  font-size: var(--default-font-size);
+  font-size: var(--btn-font-size);
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
+.cta-button:hover {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
 .second-row {
   background-color: #ffffff;
   width: 80%;
@@ -220,8 +233,6 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transform: scale(1);
-
-  
 }
 .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -269,16 +280,16 @@ body {
   margin-left: 5%;
 }
 
-.emailme{
+.emailme {
   text-align: center;
   padding-bottom: 2%;
 }
 
-.btn-red{
+.btn-red {
   background-color: var(--font-color-red);
 }
 
-.btn-blue{
+.btn-blue {
   background-color: var(--font-color-blue);
 }
 @media only screen and (max-width: 940px) {
@@ -290,10 +301,13 @@ body {
     --second-slogan-font-size: 32px;
     --default-padding: 16px;
     --default-width: 80%;
+    --btn-font-size: 16px;
   }
+
   .right-side.picture-content {
     margin-left: 0;
   }
+
   .navbar {
     text-align: left;
   }
@@ -307,13 +321,12 @@ body {
   .row {
     flex-direction: column;
   }
+
   .methodologie {
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media only screen and (max-width: 940px) {
   .navbar {
     text-align: center;
   }
