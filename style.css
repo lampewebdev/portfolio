@@ -113,7 +113,7 @@ body {
 }
 
 .row {
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,6 +361,7 @@ body {
 .btn-blue{
   background-color: var(--font-color-blue);
 }
+
 @media only screen and (max-width: 940px) {
   :root {
     --small-font-size: 12px;
@@ -371,19 +372,20 @@ body {
     --default-padding: 16px;
     --default-width: 80%;
   }
+  .row {
+    height: 100%;
+  }
   .right-side.picture-content {
     margin-left: 0;
   }
   .navbar {
-    text-align: left;
+    text-align: center;
   }
-
   .left-side,
   .right-side {
     padding-top: 10%;
     margin-bottom: 5%;
   }
-
   .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -398,11 +400,5 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media only screen and (max-width: 940px) {
-  .navbar {
-    text-align: center;
   }
 }
